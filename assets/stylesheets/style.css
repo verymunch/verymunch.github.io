@@ -1,0 +1,245 @@
+/* Fonts */
+@font-face {
+  font-family: "Monument Extended";
+  src: url("../fonts/monument_extended.woff") format('woff');
+}
+
+@font-face {
+  font-family: "courier_regular";
+  src: url("../fonts/Consolas-Mono.ttf");
+}
+
+/* Browser Cursor & Main Elements */
+body, ul, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'courier_regular';
+  line-height: 1.8em;
+  list-style: none;
+  cursor: url('../others/nyancur.png'), default;
+}
+
+/* About Section */
+.about-ptext {
+  position: absolute;
+  top: 33%;
+  padding: 20px;
+}
+
+.about {
+  font-size: 17px;
+  line-height: 1.5em; 
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.contact-header a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.uses {
+  text-align: left;
+  padding: 20px;
+  list-style: circle;
+  color: #000;
+}
+
+.paint {
+  position: absolute;
+  top: 400px;
+  left: 40px;
+  right: 40px;
+}
+
+/* Main Parallax */
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url('../backgrounds/image1.jpg');
+  min-height: 100%;
+}
+
+.pimg2 {
+  background-image: url('../backgrounds/image2.jpg');
+  min-height: 400px;
+}
+
+/* Navbar */
+.navbar {
+  width: 0;
+  height: auto;
+  background-color: transparent;
+  padding: 20px;
+  box-shadow: 0 1px 3px transparent, 0 2px 2px transparent, 0 0 2px transparent;
+}
+
+.navbar-nav-left {
+  text-transform: uppercase;
+}
+
+.navbar a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+/* First & Second Sections */
+.first-section {
+  text-align: left;
+  padding: 20px;
+  list-style: circle;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.second-section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+/* Removes parallax effect on mobile devices */
+@media(max-width:568px) {
+  .pimg1, .pimg2, .pimg3 {
+    background-attachment: scroll;
+  }
+}
+
+/* Retro-Cool Elements */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  font-family: "Monument Extended";
+  padding: 4px;
+}
+
+.badges a {
+  text-decoration: none;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.1);
+}
+
+a {
+  color: rgb(245, 192, 255);
+}
+
+a:active {
+  color: salmon;
+}
+
+.gradient {
+  animation: rainbowRotate 0.4s ease-in-out infinite;
+  background: linear-gradient(to right, #ff0000, #ffc400, #ffff00, #00FF00, #009fff, #6f00ff);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.top-container {
+  font-size: 0.85rem;
+  font-family: 'courier_regular';
+  text-align: center;
+}
+
+.bottom-container {
+  font-size: 0.85rem;
+  font-family: 'courier_regular';
+  color: #000;
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.geocities {
+  width: 200;
+  height: 200;
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 9px;
+  animation: rainbowRotate 5s ease-in-out infinite;
+  background: linear-gradient(-69deg, #3b55ac, #5ee9ff);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gif {
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+
+@keyframes rainbowRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 51%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+@media (min-width: 1280px) {
+  .content {
+    text-align: center;
+    padding: 5px 10px;
+  }
+}
